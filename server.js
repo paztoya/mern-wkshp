@@ -91,7 +91,7 @@ app.get("/partners/:partnersId", (req, res) => {
   res.end(`Will send details of the partners: ${req.params.partnersId} to you`);
 });
 
-app.post("/partners/:partners", (req, res) => {
+app.post("/partners/:partnersId", (req, res) => {
   res.statusCode = 403;
   res.end(`POST operation not supported on /partners/${req.params.partnersId}`);
 });

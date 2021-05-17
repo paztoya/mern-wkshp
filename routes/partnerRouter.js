@@ -40,11 +40,14 @@ partnerRouter
     );
   })
   .put((req, res) => {
-    res.statusCode = 403;
-    res.end("PUT operation not supported on /partner");
+    res.statusCode = 200;
+    res.end(
+      `will update the partner: ${req.body.name} \n 
+      with description: ${req.body.description}`
+    );
   })
   .delete((req, res) => {
-    res.end("Deleting all campsites");
+    res.end(`Deleting partner: /:partnerId`);
   });
 
 module.exports = partnerRouter;
